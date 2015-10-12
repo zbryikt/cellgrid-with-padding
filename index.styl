@@ -1,0 +1,81 @@
+@import vars
+@import basic
+
+html,body
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+
+#root
+  margin: 20px
+
+.root
+  border: 1px solid #000
+  width: 400px
+  height: 260px
+
+.vp.vp1
+  height: 60%
+  padding-right: 50px // hp count * 10 - 10 + fixed amount
+.vp.vp2
+  height: 40%
+  padding-right: 10px // hp count * 10 - 10 + fixed amount
+
+.hp.hp1
+  width: 50%
+  border: 1px solid #f00
+
+.hp.hp2
+  width: 10%
+  border: 1px solid #00f
+  background: #ddd
+
+.blah
+  width: 100%
+  height: 100%
+  background: #f00
+  &:after
+    display: inline
+    content: "1 2 3 4 5"
+
+
+// basic grid construct
+.root
+  padding: 10px
+  padding-bottom: 20px // vp count * 10 + fixed amount
+.vp
+  width: 100%
+  margin-top: 20px
+  margin-bottom: -10px
+.vp:first-of-type
+  margin-top: 0
+.vp:last-of-type
+  margin-bottom: -999px
+.hp
+  height: 100%
+  display: inline-block
+  vertical-align: top
+  margin-left: 20px
+  margin-right: -10px
+.vp .hp:first-of-type
+  margin-left: 0
+.vp .hp:last-of-type
+  margin-right: -999px
+
+// example
+// .root
+//   .vp(style="height:xx%")
+//     .hp(style="width:xx%")
+//     .hp(style="width:xx%")
+//   .vp(style="height:xx%")
+//     .hp(style="width:xx%")
+//     .hp(style="width:xx%")
+
+.x
+  border: 1px solid #999
+.root
+  background: #fff
+  border-radius: 5px
+  box-shadow: 0 2px 3px rgba(0,0,0,0.3)
+  border: 1px solid #999
